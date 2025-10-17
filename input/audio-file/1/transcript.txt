@@ -1,0 +1,37 @@
+The objective of this repository is to gather together some notes on the subject of backing up cloud resources.
+
+I have been interested in the concept of backup for a long time since I began exploring Linux operating systems way back when I was in school. After repeatedly breaking operating systems, you learn the importance of backups.
+
+Over time my need to back up my operating systems has diminished, but my, but the need to back up cloud resources has only become more important and pressing.
+
+For many, the very concept of backing up the cloud seems nonsensical or ruffles feathers.
+
+I might be part of a minority of computer users whose philosophy to the cloud is overall positive with the caveat that I feel the need to be able to back up my own data periodically. I regard this as an inalienable right of digital sovereignty, and the norm by which this is, and this has become entrenched as a luxury for users to be perverse.
+
+As cloud computing becomes the normative way for most computer users to store most of their data, the number of services that data might be spread over continues to increase exponentially. This is true in both the consumer and enterprise use cases or user groups.
+
+For backup to be effective, backups need to be programmatic ideally. Some would say that only programmatic backups are in any way useful at all. In fact, I would agree with this viewpoint.
+
+Unfortunately, by that standard, the amount of providers which offer consumers reliable means to programmatically back up their data, sorting their cloud applications, is disappointingly small.
+
+An example of a provider that does this is GitHub, which provides a capable API which users can use to back up their own data. This doesn't mean that there aren't commercial GitHub backup providers, but by providing an API, GitHub allows any user to script their own backup, which has never been more valuable thanks to the proliferation of AI tools.
+
+Unfortunately, GitHub remains the exception, and large tranches of the cloud remain virtually impossible to back up.
+
+If you are interested in learning more about my thoughts on this, I discuss this in a podcast and a blog.
+
+Over the years, over time and over the years, backup approaches change or the backup approaches offered by cloud providers change. Notable as being the advent of data liberation frameworks such as GDPR, which have put pressure on tech vendors to provide some rudimentary backup mechanisms to consumers. However, even when implemented by companies, these often fall far short of the degree of a desirable degree of user-friendliness for backup operations.
+
+I previously created a repository on GitHub containing some notes for how various cloud tools can be backed up. That repository hasn't been updated in more than five years, rather than try to go through the tedious process of updating individual notes, I thought it would make more sense to start a fresh, accounting for the rise of AI tools as well and the developments since.
+
+I hope to periodically update this repository with notes, which I will organize on a service, grouping services into folders, and within service folders, data types.
+
+The reasons for doing this, I might note what defaults or what providers offer in their built-in mechanisms, what third-party tool exists, if I had created my own scripts for doing the backups, I will link to them there. And any other utilities I can find on GitHub for backing up these, these tools.
+
+Examples are many, to provide a common example, Hashnode is a popular blogging service among tech writers and developers. They do offer some mechanisms for backup, but as is very commonly the case, they don't include CDN images in their export, some scripting is.
+
+However, it would be, it's almost impossible to capture even a reasonable percentage of the amount of cloud services consumers may use and whose data they may, they may wish to back up. Contributions are welcome within the spirit of the, of the objective.
+
+Finally, why back up the cloud? The cloud is not a backup, besides digital federacy concerns and data security. I have personally seen plenty of instances in which demonstrating how users can lose access to cloud data, ranging from vendor lockouts, rapid shifts in affordability, sometimes taking users by surprise, ransomware propagation, there are plenty of reasons why it is prudent to keep a backup of any data you depend upon, whether it is stored locally or in the cloud, and the basic backup best practice of 3-2-1 is a good starting point, keeping two additional copies of your cloud data, one in an on-site location, your local environment, and another in a cloud.
+
+This can be achieved, for example, in the case of GitHub, by scripting an incremental backup of your repositories to a local NAS, and then syncing the NAS up to an S3 bucket or a B2 bucket. This gives you two additional copies beyond GitHub, and this is just an example of how any one cloud service can be backed up, but using GitHub as an example because of the fact that it provides a robust API and is to my mind something of a gold standard in to model the type of data backup for cloud services that I think should be the norm for providers to offer.
